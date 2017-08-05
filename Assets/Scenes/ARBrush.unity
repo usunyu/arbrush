@@ -663,8 +663,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starTemplate: {fileID: 1828705572534058, guid: ce79d24c83a614c48bcf607468bc1c53,
     type: 2}
-  cubeTemplate: {fileID: 1000012228775698, guid: bd5ffbbe30def694dbe08fa022849312,
-    type: 2}
+  cubeTemplates:
+  - {fileID: 1000012228775698, guid: bd5ffbbe30def694dbe08fa022849312, type: 2}
+  - {fileID: 1000012228775698, guid: 06d8bd1fd42e5544bba68deefb0df51d, type: 2}
+  - {fileID: 1000012228775698, guid: 5aea35125757b2147b96fbe0abe6bb6d, type: 2}
+  - {fileID: 1000012228775698, guid: ef4684038e1f6094d8cf63ed139c13e2, type: 2}
+  - {fileID: 1000012774821922, guid: b7c91f7f429ceae4d8760584ff414623, type: 2}
+  - {fileID: 1000010440915634, guid: 76e302b6b390708479028ab22b92ca57, type: 2}
   sphereTemplate: {fileID: 1629798145361740, guid: e5dc5dac97bbf47589240713f710180d,
     type: 2}
   dollorTemplate: {fileID: 198820551320881540, guid: c55c09726683a43a8a2694d05b9de838,

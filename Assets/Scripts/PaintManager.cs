@@ -18,9 +18,9 @@ public class PaintManager : MonoBehaviour
     /// </summary>
     public GameObject starTemplate;
     /// <summary>
-    /// The cube template.
+    /// The cube templates for different color.
     /// </summary>
-    public GameObject cubeTemplate;
+    public GameObject[] cubeTemplates;
     /// <summary>
     /// The sphere template.
     /// </summary>
@@ -78,9 +78,9 @@ public class PaintManager : MonoBehaviour
         {
             throw new System.Exception("Star template not attached!");
         }
-        if (cubeTemplate == null)
+        if (cubeTemplates == null)
         {
-            throw new System.Exception("Cube template not attached!");
+            throw new System.Exception("Cube templates not attached!");
         }
         if (sphereTemplate == null)
         {
@@ -117,7 +117,6 @@ public class PaintManager : MonoBehaviour
         particleSystemList = new List<ParticleSystem>();
         currentParticle = Instantiate(dollorTemplate);
         currVertices = new List<Vector3>();
-        //paintColor = Color.green;
     }
     /// <summary>
     /// Update is called once per frame.
@@ -149,17 +148,6 @@ public class PaintManager : MonoBehaviour
     public void TogglePaint()
     {
         paintingOn = !paintingOn;
-    }
-    /// <summary>
-    /// Randomizes the color.
-    /// </summary>
-    public void RandomizeColor()
-    {
-        if (currentParticle.particleCount > 0)
-        {
-            SaveParticleSystem();
-        }
-        //paintColor = Random.ColorHSV();
     }
     /// <summary>
     /// Reset the paint.
@@ -209,7 +197,7 @@ public class PaintManager : MonoBehaviour
                 }
                 else if (currentPaintType == PaintTemplateType.STAR)
                 {
-                    GameObject go = Instantiate(starTemplate, paintPosition, transform.rotation);
+                    GameObject go = Instantiate(starTemplate, paintPosition, Camera.main.transform.rotation);
                     gameObjectList.Add(go);
                 }
                 else if (currentPaintType == PaintTemplateType.BUBBLE)
@@ -219,7 +207,9 @@ public class PaintManager : MonoBehaviour
                 }
                 else
                 {
-                    GameObject go = Instantiate(cubeTemplate, paintPosition, transform.rotation);
+                    System.Random random = new System.Random();
+                    int color = random.Next(0, cubeTemplates.Length);
+                    GameObject go = Instantiate(cubeTemplates[color], paintPosition, transform.rotation);
                     gameObjectList.Add(go);
                 }
             }
