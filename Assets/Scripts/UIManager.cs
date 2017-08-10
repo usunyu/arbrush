@@ -25,13 +25,17 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public GameObject dollarPaint;
     /// <summary>
+    /// The pepe paint.
+    /// </summary>
+    public GameObject pepePaint;
+    /// <summary>
     /// The index of the paint type.
     /// </summary>
     private int paintIndex;
     /// <summary>
     /// The paint template count.
     /// </summary>
-    private const int PAINT_TEMPLATE_COUNT = 4;
+    private const int PAINT_TEMPLATE_COUNT = 5;
     /// <summary>
     /// Awake is called when the script instance is being loaded.
     /// </summary>
@@ -56,6 +60,10 @@ public class UIManager : MonoBehaviour
         if (dollarPaint == null)
         {
             throw new System.Exception("Dollar paint not attached!");
+        }
+        if (pepePaint == null)
+        {
+            throw new System.Exception("Pepe paint not attached!");
         }
     }
     /// <summary>
@@ -107,6 +115,7 @@ public class UIManager : MonoBehaviour
         bubblePaint.SetActive(false);
         starPaint.SetActive(false);
         dollarPaint.SetActive(false);
+        pepePaint.SetActive(false);
         switch (paintManager.currentPaintType)
         {
             case PaintTemplateType.CUBE:
@@ -120,6 +129,9 @@ public class UIManager : MonoBehaviour
                 break;
             case PaintTemplateType.DOLLAR:
                 dollarPaint.SetActive(true);
+                break;
+            case PaintTemplateType.PEPE:
+                pepePaint.SetActive(true);
                 break;
         }
     }

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.iOS;
@@ -9,6 +9,7 @@ public enum PaintTemplateType
     BUBBLE, // Object
     STAR,   // Object
     DOLLAR, // Particle
+    PEPE,   // Object
 }
 
 public class PaintManager : MonoBehaviour
@@ -29,6 +30,10 @@ public class PaintManager : MonoBehaviour
     /// The dollor paint template.
     /// </summary>
     public ParticleSystem dollorTemplate;
+    /// <summary>
+    /// The pepe template.
+    /// </summary>
+    public GameObject pepeTemplate;
     /// <summary>
     /// If we have new vertices need paint.
     /// </summary>
@@ -89,6 +94,10 @@ public class PaintManager : MonoBehaviour
         if (dollorTemplate == null)
         {
             throw new System.Exception("Dollar template not attached!");
+        }
+        if (pepeTemplate == null)
+        {
+            throw new System.Exception("Pepe template not attached!");
         }
     }
     /// <summary>
@@ -203,6 +212,12 @@ public class PaintManager : MonoBehaviour
                 else if (currentPaintType == PaintTemplateType.BUBBLE)
                 {
                     GameObject go = Instantiate(sphereTemplate, paintPosition, transform.rotation);
+                    gameObjectList.Add(go);
+                }
+                else if (currentPaintType == PaintTemplateType.PEPE)
+                {
+                    Quaternion targetRotation = Quaternion.LookRotation(-Camera.main.transform.forward, Vector3.up);
+                    GameObject go = Instantiate(pepeTemplate, paintPosition, targetRotation);
                     gameObjectList.Add(go);
                 }
                 else
