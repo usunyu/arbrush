@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4007228913129966}
+  - component: {fileID: 135596837319700104}
   m_Layer: 0
   m_Name: StarTemplate
   m_TagString: Untagged
@@ -109,3 +110,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1067488758478732}
   m_Mesh: {fileID: 4300000, guid: 5496e6dce1bcb4aaab54891eaefa1b2c, type: 3}
+--- !u!135 &135596837319700104
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828705572534058}
+  m_Material: {fileID: 13400000, guid: ee185fe1587634562ae228fdde9766b7, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 90
+  m_Center: {x: 0, y: 50, z: 0}

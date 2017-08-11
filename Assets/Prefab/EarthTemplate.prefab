@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4219116713221550}
   - component: {fileID: 33404844697497444}
   - component: {fileID: 23336045277028210}
+  - component: {fileID: 135571361115527704}
   m_Layer: 0
   m_Name: EarthTemplate
   m_TagString: Untagged
@@ -81,3 +82,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1042431615621908}
   m_Mesh: {fileID: 4300000, guid: 00d595aac3b77e347a084ad71e3b7f2d, type: 3}
+--- !u!135 &135571361115527704
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1042431615621908}
+  m_Material: {fileID: 13400000, guid: ee185fe1587634562ae228fdde9766b7, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.0063411
+  m_Center: {x: -0.009745927, y: 0.006980718, z: -0.0042635207}

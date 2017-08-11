@@ -255,6 +255,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4306393841447720}
+  - component: {fileID: 135848172927836068}
   m_Layer: 0
   m_Name: PepeTemplate
   m_TagString: Untagged
@@ -1048,3 +1049,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1861542467144162}
   m_Mesh: {fileID: 4300000, guid: 2a801543215164d638924d146a98e72f, type: 3}
+--- !u!135 &135848172927836068
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1935398458960612}
+  m_Material: {fileID: 13400000, guid: ee185fe1587634562ae228fdde9766b7, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}

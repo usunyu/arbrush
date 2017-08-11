@@ -1,4 +1,4 @@
-﻿﻿using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.iOS;
@@ -178,6 +178,18 @@ public class PaintManager : MonoBehaviour
         Destroy(currentParticle);
         currentParticle = Instantiate(dollorTemplate);
         currVertices = new List<Vector3>();
+    }
+    /// <summary>
+    /// All objects free fall.
+    /// </summary>
+    public void FreeFall()
+    {
+        paintingOn = false;
+        foreach (GameObject g in gameObjectList)
+        {
+            g.AddComponent<Rigidbody>();
+            g.GetComponent<Rigidbody>().velocity = new Vector3(Random.Range(-1.0f, 1.0f), 2, Random.Range(-1.0f, 1.0f));
+        }
     }
     /// <summary>
     /// Saves the particle system.
