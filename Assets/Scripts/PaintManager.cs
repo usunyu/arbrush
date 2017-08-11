@@ -6,7 +6,7 @@ using UnityEngine.XR.iOS;
 public enum PaintTemplateType
 {
     CUBE,   // Object
-    BUBBLE, // Object
+    EARTH,  // Object
     STAR,   // Object
     DOLLAR, // Particle
     PEPE,   // Object
@@ -23,9 +23,9 @@ public class PaintManager : MonoBehaviour
     /// </summary>
     public GameObject[] cubeTemplates;
     /// <summary>
-    /// The sphere template.
+    /// The earth template.
     /// </summary>
-    public GameObject sphereTemplate;
+    public GameObject earthTemplate;
     /// <summary>
     /// The dollor paint template.
     /// </summary>
@@ -87,9 +87,9 @@ public class PaintManager : MonoBehaviour
         {
             throw new System.Exception("Cube templates not attached!");
         }
-        if (sphereTemplate == null)
+        if (earthTemplate == null)
         {
-            throw new System.Exception("Sphere template not attached!");
+            throw new System.Exception("Earth template not attached!");
         }
         if (dollorTemplate == null)
         {
@@ -209,9 +209,9 @@ public class PaintManager : MonoBehaviour
                     GameObject go = Instantiate(starTemplate, paintPosition, Camera.main.transform.rotation);
                     gameObjectList.Add(go);
                 }
-                else if (currentPaintType == PaintTemplateType.BUBBLE)
+                else if (currentPaintType == PaintTemplateType.EARTH)
                 {
-                    GameObject go = Instantiate(sphereTemplate, paintPosition, transform.rotation);
+                    GameObject go = Instantiate(earthTemplate, paintPosition, transform.rotation);
                     gameObjectList.Add(go);
                 }
                 else if (currentPaintType == PaintTemplateType.PEPE)

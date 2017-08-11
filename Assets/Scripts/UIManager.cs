@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// The bubble paint.
     /// </summary>
-    public GameObject bubblePaint;
+    public GameObject earthPaint;
     /// <summary>
     /// The star paint.
     /// </summary>
@@ -49,9 +49,9 @@ public class UIManager : MonoBehaviour
         {
             throw new System.Exception("Cube paint not attached!");
         }
-        if (bubblePaint == null)
+        if (earthPaint == null)
         {
-            throw new System.Exception("Bubble paint not attached!");
+            throw new System.Exception("Earth paint not attached!");
         }
         if (starPaint == null)
         {
@@ -112,7 +112,7 @@ public class UIManager : MonoBehaviour
     private void UpdatePaintItem()
     {
         cubePaint.SetActive(false);
-        bubblePaint.SetActive(false);
+        earthPaint.SetActive(false);
         starPaint.SetActive(false);
         dollarPaint.SetActive(false);
         pepePaint.SetActive(false);
@@ -121,8 +121,8 @@ public class UIManager : MonoBehaviour
             case PaintTemplateType.CUBE:
                 cubePaint.SetActive(true);
                 break;
-            case PaintTemplateType.BUBBLE:
-                bubblePaint.SetActive(true);
+            case PaintTemplateType.EARTH:
+                earthPaint.SetActive(true);
                 break;
             case PaintTemplateType.STAR:
                 starPaint.SetActive(true);

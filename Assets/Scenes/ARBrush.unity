@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 384192627}
   - component: {fileID: 384192626}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MainCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -792,7 +792,7 @@ MonoBehaviour:
   - {fileID: 1000012228775698, guid: ef4684038e1f6094d8cf63ed139c13e2, type: 2}
   - {fileID: 1000012774821922, guid: b7c91f7f429ceae4d8760584ff414623, type: 2}
   - {fileID: 1000010440915634, guid: 76e302b6b390708479028ab22b92ca57, type: 2}
-  sphereTemplate: {fileID: 1629798145361740, guid: e5dc5dac97bbf47589240713f710180d,
+  earthTemplate: {fileID: 1042431615621908, guid: 4c24e9ac2db1a4df4b0a70e0410e5d3d,
     type: 2}
   dollorTemplate: {fileID: 198820551320881540, guid: c55c09726683a43a8a2694d05b9de838,
     type: 2}
@@ -812,7 +812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paintManager: {fileID: 765201499}
   cubePaint: {fileID: 2000656508}
-  bubblePaint: {fileID: 1305147643}
+  earthPaint: {fileID: 1305147643}
   starPaint: {fileID: 373950370}
   dollarPaint: {fileID: 1861747589}
   pepePaint: {fileID: 65047997}
@@ -1190,7 +1190,7 @@ GameObject:
   - component: {fileID: 1305147646}
   - component: {fileID: 1305147645}
   m_Layer: 5
-  m_Name: BubblePaint
+  m_Name: EarthPaint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1285,7 +1285,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0764afce46d0c438a8a6bcd7081fe03c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 58058991afb6b49b9934b9dcd8f5134a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
